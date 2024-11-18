@@ -20,5 +20,26 @@ Now make one that does the opposite: snake2camel()
 '''
 
 
-def foo():
-    pass
+def camel2snake(name):
+  
+  snake_case = []
+  for letters in name:
+    if letters.isupper():
+      snake_case.append("_")
+    snake_case.append(letters.lower())
+  return "".join(snake_case)
+
+print(camel2snake("myName"))
+
+
+def snake2camel(name):
+ 
+  camel_case = name[0].upper()
+  for letters in name[1:]:
+    if letters == "_":
+      camel_case += letters.upper()
+    else:
+      camel_case += letters
+  return camel_case
+
+print(snake2camel("myname")) 

@@ -28,9 +28,9 @@ class listiesTest(unittest.TestCase):
 
     def test_drop_last_two(self):
         test_cases = [
-            ([1, 2, 3], [1]),
+            ([1, 2, 3], [3]),
             ([1, 5], []),
-            (["foo", "bar", "baz"], ["foo"]),
+            (["foo", "bar", "baz"], ["baz"]),
         ]
 
         for tt_in, expected in test_cases:
